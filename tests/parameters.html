@@ -29,7 +29,7 @@
           }
       }
       
-      document.getElementById('console').innerText += getParamValue('id') + ' from ' + getParams().toString();
+      document.getElementById('console').innerText += getParamValue('id') + ' from ' + JSON.stringify(getParams());
     </script>
   </body>
 </html>
