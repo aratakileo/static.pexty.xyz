@@ -1,4 +1,4 @@
-var Error = (code, title, description, main_page) => {
+var createErrorUrl = (code, title, description, main_page) => {
   var url = 'https://teacondemns.github.io/static.pexty.xyz/pages/error.html?';
   url += 'code=' + code;
   url += '&title=' + encodeURI(title);
