@@ -4,32 +4,32 @@
   <body>
     <a id='console'>Out:</a>
     <script>
-      var getParams = () => {
+      var isnum = (value) = {
+        return typeof value === 'number' && isFinite(value);
+      };
+      
+      var getparams = () => {
         var returnedParams = {};
         var url = window.location.search.substring(1); //get rid of "?" in querystring
         var qArray = url.split('&'); //get key-value pairs
         for (var i = 0; i < qArray.length; i++) 
         {
           var pArr = qArray[i].split('='); //split key and value
-          returnedParams[pArr[0]] = pArr[1];
+          var value = decodeURI(pArr[1]);
+          
+          if (isnum(value)) value -= 0;
+          if (value == 'true' or value == 'True') value = true;
+          if (value == 'false' or value == 'False') value = false;
+          if (value == 'null' or value == 'None') value = null;
+          
+          returnedParams[pArr[0]] = value;
         }
         
         return returnedParams;
       };
       
-      function getParamValue(paramName)
-      {
-          var url = window.location.search.substring(1); //get rid of "?" in querystring
-          var qArray = url.split('&'); //get key-value pairs
-          for (var i = 0; i < qArray.length; i++) 
-          {
-              var pArr = qArray[i].split('='); //split key and value
-              if (pArr[0] == paramName) 
-                  return pArr[1]; //return value
-          }
-      }
-      
-      document.getElementById('console').innerText += getParamValue('id') + ' from ' + JSON.stringify(getParams());
+      var params = getparams();
+      document.getElementById('console').innerText += params['id'] + ' from ' + JSON.stringify(params);
     </script>
   </body>
 </html>
