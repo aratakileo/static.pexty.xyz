@@ -1,3 +1,4 @@
+<a id='console'>Out:</a>
 <script>
   function getParamValue(paramName)
   {
@@ -10,5 +11,5 @@
               return pArr[1]; //return value
       }
   }
-  console.log(getParamValue('id'));
+  document.getElementById('console').innerText += getParamValue('id');
 </script>
