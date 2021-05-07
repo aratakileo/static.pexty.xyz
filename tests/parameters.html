@@ -3,8 +3,8 @@
   <head></head>
   <body>
     <a id='console'>Out:</a>
-    <script>
-      var getparams = () => {
+    <script src="javascript/getparams.js">
+      /*var getparams = () => {
         var returnedParams = {};
         var url = window.location.search.substring(1); //get rid of "?" in querystring
         var qArray = url.split('&'); //get key-value pairs
@@ -22,7 +22,7 @@
         }
         
         return returnedParams;
-      };
+      };*/
       
       var params = getparams();
       document.getElementById('console').innerText += params['id'] + ' from ' + JSON.stringify(params);
