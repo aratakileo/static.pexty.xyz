@@ -4,7 +4,8 @@ var getparams = () => {
   var qArray = url.split('&'); //get key-value pairs
   for (var i = 0; i < qArray.length; i++) 
   {
-    var pArr = qArray[i].split('=', 2); //split key and value
+    var pArr = qArray[i].split('='); //split key and value
+    pArr = [pArr[0], pArr.slice(1).join('=')];
     var value = decodeURI(pArr[1]);
     
     if (!isNaN(value)) value -= 0;
