@@ -1,15 +1,21 @@
-<a id='console'>Out:</a>
-<script>
-  function getParamValue(paramName)
-  {
-      var url = window.location.search.substring(1); //get rid of "?" in querystring
-      var qArray = url.split('&'); //get key-value pairs
-      for (var i = 0; i < qArray.length; i++) 
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <a id='console'>Out:</a>
+    <script>
+      function getParamValue(paramName)
       {
-          var pArr = qArray[i].split('='); //split key and value
-          if (pArr[0] == paramName) 
-              return pArr[1]; //return value
+          var url = window.location.search.substring(1); //get rid of "?" in querystring
+          var qArray = url.split('&'); //get key-value pairs
+          for (var i = 0; i < qArray.length; i++) 
+          {
+              var pArr = qArray[i].split('='); //split key and value
+              if (pArr[0] == paramName) 
+                  return pArr[1]; //return value
+          }
       }
-  }
-  document.getElementById('console').innerText += getParamValue('id');
-</script>
+      document.getElementById('console').innerText += getParamValue('id');
+    </script>
+  </body>
+</html>
