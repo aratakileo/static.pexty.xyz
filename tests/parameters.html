@@ -14,9 +14,9 @@
           var value = decodeURI(pArr[1]);
           
           if (!isNaN(value)) value -= 0;
-          if (value == 'true' or value == 'True') value = true;
-          if (value == 'false' or value == 'False') value = false;
-          if (value == 'null' or value == 'None') value = null;
+          if (value == 'true' || value == 'True') value = true;
+          if (value == 'false' || value == 'False') value = false;
+          if (value == 'null' || value == 'None') value = null;
           
           returnedParams[pArr[0]] = value;
         }
