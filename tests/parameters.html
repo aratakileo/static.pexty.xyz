@@ -4,10 +4,6 @@
   <body>
     <a id='console'>Out:</a>
     <script>
-      var isnum = (value) = {
-        return (value - 0) != NaN;
-      };
-      
       var getparams = () => {
         var returnedParams = {};
         var url = window.location.search.substring(1); //get rid of "?" in querystring
@@ -17,7 +13,7 @@
           var pArr = qArray[i].split('='); //split key and value
           var value = decodeURI(pArr[1]);
           
-          if (isnum(value)) value -= 0;
+          if (!isNaN(value)) value -= 0;
           if (value == 'true' or value == 'True') value = true;
           if (value == 'false' or value == 'False') value = false;
           if (value == 'null' or value == 'None') value = null;
