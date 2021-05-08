@@ -1,2 +1,31 @@
 a { color: #4183c4; text-decoration: none; }
 a:hover { text-decoration: underline; }
+
+.interactive {
+    background-color: white;
+    transition:.4s;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    height: 200px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(196, 196, 196);
+    border-radius: 10px;
+}
+
+.interactive:hover{
+    background-color: #87ceed;
+} 
+
+.interactive:active {
+    background-color: #b3e5fe;
+}
+
+.button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
