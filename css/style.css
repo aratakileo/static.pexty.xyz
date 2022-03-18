@@ -1,8 +1,12 @@
+body {
+    background: #efeff4;
+}
+
 a { color: #4183c4; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .interactive {
-    transition:.4s;
+    transition:.6s;
     position: relative;
     display: flex;
     box-sizing: border-box;
@@ -11,14 +15,15 @@ a:hover { text-decoration: underline; }
     height: 200px;
     width: 100%;
     border-radius: 10px;
+    background: white;
 }
 
 .interactive:hover{
-    background-color: #87ceed;
+    background-color: #d9ebff;
 } 
 
 .interactive:active {
-    background-color: #b3e5fe;
+    background-color: #d1d2df;
 }
 
 .shadow {
@@ -26,8 +31,12 @@ a:hover { text-decoration: underline; }
 }
 
 .button {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-style: none;
+    border-color: white;
+    background-color: white;
 }
