@@ -12,8 +12,6 @@ a:hover { text-decoration: underline; }
     box-sizing: border-box;
     margin-bottom: .5rem;
     margin-right: .5rem;
-    height: 200px;
-    width: 100%;
     border-radius: 10px;
     background: white;
 }
@@ -31,7 +29,6 @@ a:hover { text-decoration: underline; }
 }
 
 .button {
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
