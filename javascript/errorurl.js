@@ -1,5 +1,5 @@
 var createErrorUrl = (code, title, description, main_page) => {
-  var url = 'https://teacondemns.github.io/static.pexty.xyz/pages/error.html?';
+  var url = 'https://aratakileo.github.io/static.pexty.xyz/pages/error.html?';
   url += 'code=' + code;
   url += '&title=' + encodeURI(title);
   url += '&description=' + encodeURI(description);
